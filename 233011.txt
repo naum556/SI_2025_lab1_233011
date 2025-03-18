@@ -1,0 +1,85 @@
+							Git документација
+
+Дел 2
+
+git fetch origin
+git checkout 5-filter-tasks-by-category
+git fetch origin
+git checkout 7-count-tasks-per-category
+git fetch origin
+git checkout 9-mark-all-tasks-in-a-category-as-completed
+
+-Со командата fetch ги зедовме трите гранки во локалниот репозиториум без да им направиме merge за да не настани промена во
+главната гранка.
+
+git checkout 5-filter-tasks-by-category - се префрламе на гранката 5-filter-tasks-by-category
+
+git status
+On branch 5-filter-tasks-by-category
+Your branch is up to date with 'origin/5-filter-tasks-by-category'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SI2025Lab1Main.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        SI_2025_lab1_233011.iml
+
+-Koристиме git status да видиме кои датотеки треба да се додадат на сцена од кога направивме некои промени во кодот.
+
+git add . - Со git add . ги додаваме сите промени на сцена 
+
+
+git commit -m "Added filter by category feature" - Правиме commit на нов додаден feature кај една од гранките каде што ги филтрирамe задачите по категорија
+
+git push origin  5-filter-tasks-by-category -  ја синхронизираме гранката од локалното складиште со remote складиштето, така нашите промени во локалното складиште исто така ќе се појават на remote складиштето на GitHub
+
+git checkout 7-count-tasks-per-category - се префрламе на друга гранка каде ги броиме задачите по категорија
+
+git status - Ги гледаме промените кои треба да се додадат на сцена
+
+git add . -  ги додаваме сите промени на сцена
+
+git commit -m "Added Count tasks by category feature" - Правиме commit на промените
+
+git push origin 7-count-tasks-per-category - ја синхронизираме локалната гранка со гранката од remote складиштето
+
+git checkout 9-mark-all-tasks-in-a-category-as-completed - се префрламе на гранката каде работиме со маркирање на сите задачи од дадена категорија како завршени
+
+git add . - Повторно ги додаваме сите промени во кодот што сме го направиле на оваа гранка
+
+git commit - m "Added mark all tasks in a category as completed feature" - Правиме commit на промените
+
+git push origin 9-mark-all-tasks-in-a-category-as-completed - вршиме повторно синхронизација со remote складиштето и локалното складиште
+
+Од кога направивме Merge and pull request на двете гранки не настанаа никакви конфликти при извршување на наредбата.
+За да се изврши спојување овде се користи Рекурзивно спојување бидејќи се користи нов merge commit за да се споjат дивергентни и конвергирани гранки.
+
+git checkout master, git merge 7-count-tasks-per-category - правиме спојување на главната гранка master со гранката 7-count-tasks-per-category, со тоа ние промените од 7-count-tasks-per-category ги применуваме во главната гранка и сега гранката master ги содржи промените кои ги направивме во 7-count-tasks-per-category.
+гранката 7-count-tasks-per-category автоматски направи Pull request и е ставена во состојба Done
+
+git push origin master - Повторно правиме синхронизација со remote складиштето
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
